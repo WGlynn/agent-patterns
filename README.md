@@ -2,6 +2,26 @@
 
 Five small, self-contained skills for long-running agents. Each is a single `SKILL.md` with no external dependencies, licensed Apache-2.0.
 
+## Quickstart — copy the whole set in one command
+
+In Claude Code:
+
+```
+/plugin marketplace add WGlynn/agent-patterns
+/plugin install agent-patterns@agent-patterns
+```
+
+That's it. The five skills are now available and fire automatically when a task calls for them. Nothing else to configure.
+
+Prefer just one? Every skill is a self-contained folder — copy any `skills/<name>/SKILL.md` into your own project's `.claude/skills/` and it works on its own, no marketplace needed. To fork the whole set, clone this repo and point your marketplace at the clone:
+
+```
+git clone https://github.com/WGlynn/agent-patterns
+/plugin marketplace add ./agent-patterns
+```
+
+Everything here is Apache-2.0 — copy it, change it, ship it.
+
 | Skill | What it does |
 |---|---|
 | **critical-qa** | Self-adversarial review across fixed categories before declaring a change done. |
